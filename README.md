@@ -10,7 +10,7 @@ make main
 ```
 
 ## 🔥 Motivation
-The major motivation is to learn low level working with files and manipulation with bytes. Plus, I wanted to revise and practice memory management via pointers and allocation/deallocation. Here are some of the concepts I've learned writing this mini project:
+The major motivation is to learn working with files at a low level and manipulation with bytes. Plus, I wanted to revise and practice memory management via pointers and allocation/deallocation. Here are some of the concepts I've learned writing this mini project:
 - Nibble and manipulation of its bits/bytes
 - Reading particular bytes and extracting them into a buffer
 - Converting decimal to hexadecimal through snprintf
