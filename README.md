@@ -11,7 +11,7 @@ make main
 
 ## 🔥 Motivation
 The major motivation is to learn working with files at a low level and manipulation with bytes. Plus, I wanted to revise and practice memory management via pointers and allocation/deallocation. Here are some of the concepts I've learned writing this mini project:
-- Nibble and manipulation of its bits/bytes
+- Manipulation of bits/bytes with different data size types
 - Reading particular bytes and extracting them into a buffer
 - Converting decimal to hexadecimal through snprintf
 - Importance of using local variables and give them to functions instead of global variables
