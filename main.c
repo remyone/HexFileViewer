@@ -98,7 +98,6 @@ void PrintReadLine(char *hex_address, char *buffer, long FileSize, long offset, 
             printf(yellow"0a "reset);
         else
             printf(green"%x "reset, opcode);
-        //for (int i = 0; i < (17 - minimum_remaining_bytes) * 2 - 1)
     }
 
     findAndModifyNewLine(buffer, sizeof(char) * FileSize + 1);
@@ -117,9 +116,10 @@ void ReadFile(char *filename, long *offset) {
     }
 
     long FileSize;
-    if ((FileSize = GetFileSize(file)) == -1l)
+    if ((FileSize = GetFileSize(file)) == -1l) {
         printf(red"ERROR: [getting file size failed]\n"reset);
-
+        exit(-1);
+    }
     char *buffer = malloc(sizeof(char) * FileSize + 1);
 
     if (buffer == NULL) {
@@ -130,10 +130,6 @@ void ReadFile(char *filename, long *offset) {
     int minimum_remaining_bytes;
     long remaining_bytes;
     rewind(file);
-
-    /*
-    
-    */
 
     while (*offset < FileSize) {
         remaining_bytes = FileSize - *offset;
